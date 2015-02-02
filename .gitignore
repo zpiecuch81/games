@@ -1,4 +1,5 @@
 .gradle
+.metadata
 build/
 
 # Ignore Gradle GUI config
