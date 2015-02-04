@@ -10,6 +10,9 @@ public class AndroidLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		RateApp.app_launched( this );
+
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 		initialize(new Game(), config);
 	}

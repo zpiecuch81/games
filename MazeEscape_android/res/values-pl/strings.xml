@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maze Escape</string>
+    <string name="button_rateNoThanks">Nie, dziękuję.</string>
+    <string name="button_rateLater">Przypomnij mi później.</string>
+    <string name="button_rateNow">Oceń \0</string>
+    <string name="msgRateDialog">Proszę poświęć chwilę i oceń grę Maze Escape.\n
+        Dziękuję za wsparcie!</string>
+</resources>

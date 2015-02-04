@@ -2,5 +2,10 @@
 <resources>
 
     <string name="app_name">Maze Escape</string>
+    <string name="button_rateNoThanks">No, thanks.</string>
+    <string name="button_rateLater">Remind me later.</string>
+    <string name="button_rateNow">Rate \0</string>
+    <string name="msgRateDialog">If you enjoy playing Maze Escape, please take a moment to rate it.\n
+        Thank you for your support!</string>
 
 </resources>

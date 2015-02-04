@@ -42,7 +42,6 @@ public class Game implements ApplicationListener {
 		Gdx.input.setInputProcessor(inputMultiplexer);
 
 		res = new Content();
-		res.loadTexture("images/hud.png");
 		res.loadTexture("images/dot.png");
 		res.loadTexture("images/title.png");
 		res.loadTexture("images/background.jpg");
