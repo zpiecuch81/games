@@ -18,15 +18,15 @@ public class LevelSelect extends GameState {
 	public LevelSelect(GameStateManager gsm) {
 		super(gsm);
 
-		int buttonWidth = (int)(cam.viewportWidth / LEVELS_PER_ROW /2);
-		int buttonHeight = (int)(cam.viewportHeight / 10);
+		int buttonWidth = (int)(cam.viewportWidth / LEVELS_PER_ROW /1.5);
+		int buttonHeight = (int)(cam.viewportHeight / 5 / 1.5);
 		buttons = new LevelButton[LEVELS_COUNT];
 		Scores scores = new Scores();
 		for(int button = 0; button < buttons.length; button++) {
 			int row = (int)(button / LEVELS_PER_ROW);
 			buttons[button] = new LevelButton(
-					(int)((2*(button%LEVELS_PER_ROW)+1)*buttonWidth),
-					(int)(cam.viewportHeight-(2*row+1.5)*buttonHeight),
+					(int)((1.5*(button%LEVELS_PER_ROW)+0.75)*buttonWidth),
+					(int)(cam.viewportHeight-(1.5*row+0.75)*buttonHeight),
 					buttonWidth,
 					buttonHeight,
 					cam,

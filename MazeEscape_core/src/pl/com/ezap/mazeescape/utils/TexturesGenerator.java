@@ -1,9 +1,12 @@
 package pl.com.ezap.mazeescape.utils;
 
+import pl.com.ezap.mazeescape.main.Game;
+
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Pixmap.Format;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class TexturesGenerator {
 
@@ -27,25 +30,8 @@ public class TexturesGenerator {
 		return texture;
 	}
 
-	public static Texture getLevelButton( int width, int height, boolean grayed) {
-
-		Pixmap pix = new Pixmap(width, height, Format.RGBA8888);
-		pix.setColor(grayed?Color.DARK_GRAY:Color.BLUE);
-		pix.fillRectangle(0,0,width,height);
-
-		int dx = width / 7;
-		int dy = height / 7;
-		pix.setColor(grayed?Color.GRAY:Color.ORANGE);
-		pix.fillRectangle(0, dy, 2*dx, dy);
-		pix.fillRectangle(dx, 2*dy, 2*dx, dy);
-		pix.fillRectangle(2*dx, 3*dy, 2*dx, dy);
-		pix.fillRectangle(3*dx, 4*dy, dx, 3*dy);
-		pix.fillRectangle(3*dx, 6*dy, 4*dx, dy);
-		pix.fillRectangle(6*dx, dy, dx, 6*dy);
-		pix.fillRectangle(4*dx, dy, 3*dx, dy);
-
-		Texture texture = new Texture(pix);
-		pix.dispose();
-		return texture;
+	public static TextureRegion getLevelButton( int width, int height, boolean grayed) {
+		Texture tex=Game.res.getTexture("levels");
+		return new TextureRegion(tex, grayed ? 95 : 0, 0, 95, 100);
 	}
 }

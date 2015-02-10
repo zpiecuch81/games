@@ -5,10 +5,10 @@ import pl.com.ezap.mazeescape.utils.TexturesGenerator;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.BitmapFont.TextBounds;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector3;
 
 public class MenuButton {
@@ -22,7 +22,7 @@ public class MenuButton {
 
 	Vector3 vec;
 	private OrthographicCamera cam;
-	private Texture texture;
+	private TextureRegion texture;
 	private BitmapFont font;
 	private TextBounds textBounds;
 
@@ -48,11 +48,12 @@ public class MenuButton {
 		this.texture = getTexture();
 	}
 
-	protected Texture getTexture() {
-		return TexturesGenerator.getRegularButton(
+	protected TextureRegion getTexture() {
+		return new TextureRegion(
+				TexturesGenerator.getRegularButton(
 				width,
 				height,
-				available ? Color.PURPLE : Color.GRAY);
+				available ? Color.PURPLE : Color.GRAY));
 	}
 
 	public boolean isClicked() {
@@ -65,7 +66,6 @@ public class MenuButton {
 			font.dispose();
 		}
 		font = FontFactory.getFont(text, 46, width, height, true);
-		//font = FontFactory.getFont(text, width, height);
 		textBounds = font.getBounds(text);
 	}
 
@@ -84,7 +84,7 @@ public class MenuButton {
 
 	public void render(SpriteBatch sb) {
 		sb.begin();
-		sb.draw(texture, x-(width/2), y-(height/2));
+		sb.draw(texture, x-(width/2), y-(height/2), width, height);
 		if(text != null) {
 			font.draw(sb, text, x-textBounds.width/2, y+textBounds.height/2);
 		}
