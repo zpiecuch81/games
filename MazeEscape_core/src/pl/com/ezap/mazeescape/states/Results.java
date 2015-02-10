@@ -36,7 +36,7 @@ public class Results extends GameState {
 		super(gsm);
 
 		cam.setToOrtho(false, Game.V_WIDTH, Game.V_HEIGHT);
-		menuHeight = (int)(cam.viewportHeight / 10);
+		menuHeight = (int)(cam.viewportHeight / 11);
 
 		new Scores().setStarsCount(Play.level, 0);
 
@@ -122,7 +122,7 @@ public class Results extends GameState {
 			gainedStarsCount = 3;
 		} else if( currentTime < bestPossible * 3 ) {
 			gainedStarsCount = 2;
-		} else if( currentTime < bestPossible * 4.2 ) {
+		} else if( currentTime < bestPossible * 4 ) {
 			gainedStarsCount = 1;
 		}
 		if( gainedStarsCount > scores.getStarsCount(Play.level) ) {

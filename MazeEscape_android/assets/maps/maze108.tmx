@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="10" height="13" tilewidth="64" tileheight="64">
  <properties>
-  <property name="bestTimePossible" value=""/>
+  <property name="bestTimePossible" value="12.73"/>
   <property name="viewSize" value="5"/>
  </properties>
  <tileset firstgid="1" name="sandbush" tilewidth="64" tileheight="64">
@@ -9,27 +9,27 @@
  </tileset>
  <layer name="path" width="10" height="13">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4CBAQACCAAB
+   eJxjYCANMCHR6JgBhxw2/ehsbHrxmYdNL7r7CJmHTz8uM/DZj0svur3o5uLSi242PndTCgBrwABf
   </data>
  </layer>
  <layer name="wall" width="10" height="13">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYCQSEwKj6uirjpoYAC70ADM=
+   eJxjZGBgYCQBMyDR6IARhxw2/ehsbHrxmYdNL7r7CJmHTz8+v+JzOy53YHMLLvNwmY3P3ZRiAFI4AFQ=
   </data>
  </layer>
  <layer name="hint" width="10" height="13">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4CBAQACCAAB
+   eJxjYCAPcAIxKxLmwiHHjqaPDQcbXS+yPg4s9mDTiw3A9HIRUkiEmwjZj81vyGLY/IZNHTazYf5AD09qAQAw7wEN
   </data>
  </layer>
- <layer name="start" width="10" height="13">
+ <layer name="start" width="10" height="13" visible="0">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4CBAQACCAAB
+   eJxjYBgFgw2wDICdAAPYAAU=
   </data>
  </layer>
  <layer name="end" width="10" height="13">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4CBAQACCAAB
+   eJxjYBiegHmgHTDEAAAFmAAE
   </data>
  </layer>
 </map>

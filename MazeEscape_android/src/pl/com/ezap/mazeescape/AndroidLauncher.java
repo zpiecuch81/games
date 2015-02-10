@@ -37,8 +37,8 @@ public class AndroidLauncher extends AndroidApplication {
 		RelativeLayout.LayoutParams adParams = 
 				new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, 
 						RelativeLayout.LayoutParams.WRAP_CONTENT);
-		adParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
-		adParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+		adParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		adParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
 		RelativeLayout layout = new RelativeLayout(this);
 		layout.addView(gameView);
 		layout.addView(adView, adParams);

@@ -10,7 +10,7 @@ import pl.com.ezap.mazeescape.utils.Scores;
 
 public class LevelSelect extends GameState {
 
-	public final static int LEVELS_COUNT = 5;
+	public final static int LEVELS_COUNT = 12;
 	private final int LEVELS_PER_ROW = 5;
 
 	private LevelButton[] buttons;
@@ -21,7 +21,7 @@ public class LevelSelect extends GameState {
 		int buttonWidth = (int)(cam.viewportWidth / LEVELS_PER_ROW /2);
 		int buttonHeight = (int)(cam.viewportHeight / 10);
 		buttons = new LevelButton[LEVELS_COUNT];
-		//Scores scores = new Scores();
+		Scores scores = new Scores();
 		for(int button = 0; button < buttons.length; button++) {
 			int row = (int)(button / LEVELS_PER_ROW);
 			buttons[button] = new LevelButton(
@@ -30,8 +30,7 @@ public class LevelSelect extends GameState {
 					buttonWidth,
 					buttonHeight,
 					cam,
-					true );
-					//scores.isLevelEnabled(button+1) );
+					scores.isLevelEnabled(button+1) );
 			buttons[button].setText(button + 1 + "");
 		}
 	}

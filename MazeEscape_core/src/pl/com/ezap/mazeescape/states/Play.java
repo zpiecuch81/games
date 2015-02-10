@@ -95,10 +95,10 @@ public class Play extends GameState {
 	private void readMap()
 	{
 		try {
-			tileMap = new TmxMapLoader().load("maps/maze00" + level + ".tmx");
+			tileMap = new TmxMapLoader().load("maps/maze" + (level+99) + ".tmx");
 		}
 		catch(Exception e) {
-			System.out.println("Cannot find file: maps/maze00" + level + ".tmx");
+			System.out.println("Cannot find file: maps/maze" + (level+99) + ".tmx");
 			Gdx.app.exit();
 		}
 		tileMapWidth = (Integer) tileMap.getProperties().get("width");
@@ -108,7 +108,7 @@ public class Play extends GameState {
 
 		String bestTime = (String)(tileMap.getProperties().get("bestTimePossible"));
 		if(bestTime.isEmpty()) {
-			System.out.println("Error: Map: res/maps/maze" + level + ".tmx has no possible time set!");
+			System.out.println("Error: Map: res/maps/maze" + (level+99) + ".tmx has no possible time set!");
 		} else {
 			Scores scores = new Scores();
 			scores.setPossibleTime(level, Float.valueOf(bestTime));
@@ -234,19 +234,8 @@ public class Play extends GameState {
 				BodyDef bdef = new BodyDef();
 				bdef.type = BodyType.StaticBody;
 				PolygonShape polygon = new PolygonShape();
-				if( row == 0 ) {
-					bdef.position.set( (col + 0.5f) * tileSize / PPM, 0.1f * tileSize / PPM);
-					polygon.setAsBox(tileSize/2/PPM, tileSize/10/PPM);
-				} else if ( row == layer.getHeight() - 1 ) {
-					bdef.position.set( (col + 0.5f) * tileSize / PPM, (row + 0.9f) * tileSize / PPM);
-					polygon.setAsBox(tileSize/2/PPM, tileSize/10/PPM);
-				} else if ( col == 0 ) {
-					bdef.position.set( 0.1f * tileSize / PPM, (row + 0.5f) * tileSize / PPM);
-					polygon.setAsBox(tileSize/10/PPM, tileSize/2/PPM);
-				} else if ( col == layer.getWidth() - 1 ) {
-					bdef.position.set( (col + 0.9f) * tileSize / PPM, (row + 0.5f) * tileSize / PPM);
-					polygon.setAsBox(tileSize/10/PPM, tileSize/2/PPM);
-				}
+				bdef.position.set( (col + 0.5f) * tileSize / PPM, (row + 0.5f) * tileSize / PPM);
+				polygon.setAsBox(tileSize/8/PPM, tileSize/8/PPM);
 				Body body = world.createBody(bdef);
 				FixtureDef fdef = new FixtureDef();
 				fdef.shape = polygon;
@@ -254,6 +243,7 @@ public class Play extends GameState {
 				fdef.filter.categoryBits = B2DVars.BIT_END;
 				fdef.filter.maskBits = B2DVars.BIT_PLAYER;
 				body.createFixture(fdef).setUserData("end");
+				return;
 			}
 		}
 	}
@@ -289,7 +279,7 @@ public class Play extends GameState {
 				velocity.right();
 			}
 		}
-		setHintVisibility(true);
+		setHintVisibility(false);
 		if( currentZoom > maxZoom ){
 			currentZoom = maxZoom;
 			setHintVisibility(true);
