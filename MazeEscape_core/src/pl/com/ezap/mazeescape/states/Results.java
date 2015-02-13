@@ -118,11 +118,11 @@ public class Results extends GameState {
 		Scores scores = new Scores();
 		float bestPossible = scores.getPossibleTime(Play.level);
 		float currentTime = player.getTime();
-		if( currentTime < bestPossible * 1.6 ) {
+		if( currentTime < bestPossible * 1.4 ) {
 			gainedStarsCount = 3;
-		} else if( currentTime < bestPossible * 3 ) {
+		} else if( currentTime < bestPossible * 2.6 ) {
 			gainedStarsCount = 2;
-		} else if( currentTime < bestPossible * 4 ) {
+		} else if( currentTime < bestPossible * 3.5 ) {
 			gainedStarsCount = 1;
 		}
 		if( gainedStarsCount > scores.getStarsCount(Play.level) ) {

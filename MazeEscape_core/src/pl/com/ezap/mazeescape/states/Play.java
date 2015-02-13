@@ -76,6 +76,7 @@ public class Play extends GameState {
 
 		readMap();
 		setCameraAndZoom();
+		setHintVisibility(false);
 
 		createWalls();
 		setStartPosition();
