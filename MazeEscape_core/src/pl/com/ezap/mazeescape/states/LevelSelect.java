@@ -10,7 +10,7 @@ import pl.com.ezap.mazeescape.utils.Scores;
 
 public class LevelSelect extends GameState {
 
-	public final static int LEVELS_COUNT = 17;
+	public final static int LEVELS_COUNT = 26;
 	private final int LEVELS_PER_ROW = 5;
 
 	private LevelButton[] buttons;
