@@ -165,11 +165,12 @@ public class Results extends GameState {
 	private void createButtons()
 	{
 		Scores scores = new Scores();
-		next = new MenuButton(Game.V_WIDTH/2, (int)(4.5*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam, scores.getStarsCount(Play.level) > 0 );
+		next = new MenuButton(Game.V_WIDTH/2, (int)(4.5*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam,
+				scores.getStarsCount(Play.level) > 0 && Play.level < LevelSelect.LEVELS_COUNT );
 		next.setText( Game.texts.get("next") );
-		repeat = new MenuButton(Game.V_WIDTH/2, (int)(3*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam);
+		repeat = new MenuButton( Game.V_WIDTH/2, (int)(3*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam );
 		repeat.setText( Game.texts.get("repeat") );
-		menu = new MenuButton(Game.V_WIDTH/2, (int)(1.5*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam);
+		menu = new MenuButton( Game.V_WIDTH/2, (int)(1.5*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam );
 		menu.setText( Game.texts.get("menu") );
 	}
 }
