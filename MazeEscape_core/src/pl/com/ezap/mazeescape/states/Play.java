@@ -337,7 +337,7 @@ public class Play extends GameState {
 			gsm.setState(GameStateManager.RESULT);
 		}
 		if( cl.wallHit() ) {
-			Game.res.getSound("hit").play(0.5f);
+			//Game.res.getSound("hit").play(0.5f);
 			velocity.none();
 		}
 	}

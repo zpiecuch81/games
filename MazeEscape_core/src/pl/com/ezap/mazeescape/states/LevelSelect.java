@@ -74,9 +74,9 @@ public class LevelSelect extends GameState {
 			buttons[button].update(dt);
 			if(buttons[button].isClicked()) {
 				Play.level = button + buttonShift;
-				Game.res.getSound("levelselect").play();
+				//Game.res.getSound("levelselect").play();
 				gsm.setState(GameStateManager.PLAY);
-				if( button + buttonShift == 0 ) {
+				if( button + buttonShift == 1 ) {
 					gsm.pushState(GameStateManager.INSTRUCTIONS);
 				}
 			}

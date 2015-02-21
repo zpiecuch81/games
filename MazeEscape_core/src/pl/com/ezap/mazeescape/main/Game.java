@@ -40,6 +40,7 @@ public class Game implements ApplicationListener {
 		gd.setLongPressSeconds(0.5f);
 		inputMultiplexer.addProcessor(gd);
 		Gdx.input.setInputProcessor(inputMultiplexer);
+		Gdx.input.setCatchBackKey(true);
 
 		res = new Content();
 		res.loadTexture("images/dot.png");
