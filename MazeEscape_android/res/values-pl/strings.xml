@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="banner_ad_unit_id">ca-app-pub-4163298076894798/2080813469</string>
+
     <string name="app_name">Maze Escape</string>
     <string name="button_rateNoThanks">Nie, dziękuję.</string>
     <string name="button_rateLater">Przypomnij mi później.</string>
