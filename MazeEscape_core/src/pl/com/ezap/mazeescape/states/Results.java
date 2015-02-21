@@ -31,12 +31,14 @@ public class Results extends GameState {
 	private Vector2 bestResultPosition;
 	private int gainedStarsCount;
 	private TextureRegion[] gainedStars;
+	private boolean notLastMap=true;
 
 	public Results(GameStateManager gsm) {
 		super(gsm);
 
 		cam.setToOrtho(false, Game.V_WIDTH, Game.V_HEIGHT);
 		menuHeight = (int)(cam.viewportHeight / 11);
+		notLastMap = Play.level < LevelSelect.LEVELS_COUNT;
 
 		new Scores().setStarsCount(Play.level, 0);
 
@@ -56,7 +58,7 @@ public class Results extends GameState {
 		repeat.update(dt);
 		menu.update(dt);
 
-		if(next.isClicked()) {
+		if(next.isClicked() && notLastMap) {
 			Play.level = Play.level + 1;
 			gsm.setState(GameStateManager.PLAY);
 		}
@@ -85,7 +87,9 @@ public class Results extends GameState {
 		font.draw(sb, bestResult, bestResultPosition.x, bestResultPosition.y);
 		sb.end();
 
-		next.render(sb);
+		if( notLastMap ) {
+			next.render(sb);
+		}
 		repeat.render(sb);
 		menu.render(sb);
 	}
@@ -165,8 +169,7 @@ public class Results extends GameState {
 	private void createButtons()
 	{
 		Scores scores = new Scores();
-		next = new MenuButton(Game.V_WIDTH/2, (int)(4.5*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam,
-				scores.getStarsCount(Play.level) > 0 && Play.level < LevelSelect.LEVELS_COUNT );
+		next = new MenuButton(Game.V_WIDTH/2, (int)(4.5*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam, scores.getStarsCount(Play.level) > 0 );
 		next.setText( Game.texts.get("next") );
 		repeat = new MenuButton( Game.V_WIDTH/2, (int)(3*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam );
 		repeat.setText( Game.texts.get("repeat") );
