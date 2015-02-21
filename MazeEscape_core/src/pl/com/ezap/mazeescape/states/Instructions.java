@@ -14,6 +14,7 @@ public class Instructions extends GameState {
 
 	private MenuButton back;
 	private BitmapFont font;
+	public static boolean initialInfo = false;
 
 	public Instructions(GameStateManager gsm) {
 		super(gsm);
@@ -24,7 +25,12 @@ public class Instructions extends GameState {
 				(int)(cam.viewportWidth*0.8),
 				(int)(cam.viewportHeight/10),
 				cam);
-		back.setText(Game.texts.get("back"));
+		if( initialInfo ){
+			back.setText(Game.texts.get("play"));
+			initialInfo = false;
+		} else {
+			back.setText(Game.texts.get("back"));
+		}
 	}
 
 	@Override

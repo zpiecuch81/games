@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.GL20;
 import pl.com.ezap.mazeescape.handlers.GameStateManager;
 import pl.com.ezap.mazeescape.handlers.LevelButton;
 import pl.com.ezap.mazeescape.handlers.MenuButton;
-import pl.com.ezap.mazeescape.main.Game;
 import pl.com.ezap.mazeescape.utils.Scores;
 
 public class LevelSelect extends GameState {
@@ -27,8 +26,9 @@ public class LevelSelect extends GameState {
 
 		if( currentPage < 1 || currentPage > PAGES_COUNT)
 			currentPage = 1;
+		int adsHeight = 50;
 		int buttonWidth = (int)(cam.viewportWidth / LEVELS_PER_ROW /1.5);
-		int buttonHeight = (int)(cam.viewportHeight / ( LEVEL_ROWS + 1 ) / 1.5);
+		int buttonHeight = (int)( cam.viewportHeight / ( LEVEL_ROWS + 1 ) / 1.5 - adsHeight / ( LEVEL_ROWS + 1 ) );
 		buttonShift = ( currentPage - 1 ) * LEVELS_PER_PAGE + 1;
 		int levelsOnThisPage = currentPage == PAGES_COUNT ? LEVELS_COUNT%LEVELS_PER_PAGE : LEVELS_PER_PAGE;
 		buttons = new LevelButton[levelsOnThisPage];
@@ -77,6 +77,7 @@ public class LevelSelect extends GameState {
 				//Game.res.getSound("levelselect").play();
 				gsm.setState(GameStateManager.PLAY);
 				if( button + buttonShift == 1 ) {
+					Instructions.initialInfo = true;
 					gsm.pushState(GameStateManager.INSTRUCTIONS);
 				}
 			}
