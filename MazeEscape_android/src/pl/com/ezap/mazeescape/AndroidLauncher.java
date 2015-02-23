@@ -40,6 +40,8 @@ public class AndroidLauncher extends AndroidApplication {
 		adParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		adParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
 		RelativeLayout layout = new RelativeLayout(this);
+		layout.setBackgroundColor(0xffffffff);
+		layout.setBackgroundResource(R.drawable.ezap_logo_v);
 		layout.addView(gameView);
 		layout.addView(adView, adParams);
 		setContentView(layout);
