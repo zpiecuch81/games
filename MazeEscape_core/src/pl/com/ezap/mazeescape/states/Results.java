@@ -176,4 +176,9 @@ public class Results extends GameState {
 		menu = new MenuButton( Game.V_WIDTH/2, (int)(1.5*menuHeight), (int)(cam.viewportWidth*0.8), menuHeight, cam );
 		menu.setText( Game.texts.get("menu") );
 	}
+
+	@Override
+	public void back() {
+		gsm.setState(GameStateManager.MENU);
+	}
 }

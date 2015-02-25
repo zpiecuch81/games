@@ -97,4 +97,9 @@ public class InGameOptions extends GameState {
 		instructions.dispose();
 	}
 
+	@Override
+	public void back() {
+		gsm.popState();
+	}
+
 }

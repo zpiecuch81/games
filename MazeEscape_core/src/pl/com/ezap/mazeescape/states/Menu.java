@@ -74,5 +74,10 @@ public class Menu extends GameState {
 		play.dispose();
 		exit.dispose();
 	}
+
+	@Override
+	public void back() {
+		Gdx.app.exit();
+	}
 	
 }

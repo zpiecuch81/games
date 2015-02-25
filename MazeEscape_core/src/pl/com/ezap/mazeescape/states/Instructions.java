@@ -72,4 +72,9 @@ public class Instructions extends GameState {
 		back.dispose();
 	}
 
+	@Override
+	public void back() {
+		gsm.popState();
+	}
+
 }

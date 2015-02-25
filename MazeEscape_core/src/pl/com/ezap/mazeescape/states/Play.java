@@ -391,4 +391,9 @@ public class Play extends GameState {
 		layer.setVisible(visible);
 		layer.setOpacity(0.5f);
 	}
+
+	@Override
+	public void back() {
+		gsm.setState(GameStateManager.MENU);
+	}
 }

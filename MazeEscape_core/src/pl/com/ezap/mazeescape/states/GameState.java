@@ -37,6 +37,7 @@ public abstract class GameState {
 				(int)Math.min(cam.viewportHeight, background.getHeight()));
 	}
 
+	public abstract void back();
 	public abstract void handleInput();
 	public abstract void update(float dt);
 

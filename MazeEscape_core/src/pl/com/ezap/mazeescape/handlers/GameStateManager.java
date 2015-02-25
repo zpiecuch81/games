@@ -32,6 +32,11 @@ public class GameStateManager {
 		Play.level = 1;
 	}
 
+	public void back()
+	{
+		gameStates.peek().back();
+	}
+
 	public void update(float dt)
 	{
 		gameStates.peek().update(dt);

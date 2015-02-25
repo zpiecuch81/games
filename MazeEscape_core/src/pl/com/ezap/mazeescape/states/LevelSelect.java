@@ -124,4 +124,9 @@ public class LevelSelect extends GameState {
 			pageButton[1].dispose();
 	}
 
+	@Override
+	public void back() {
+		gsm.setState(GameStateManager.MENU);
+	}
+
 }
