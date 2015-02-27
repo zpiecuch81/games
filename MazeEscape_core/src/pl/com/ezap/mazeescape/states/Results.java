@@ -40,8 +40,6 @@ public class Results extends GameState {
 		menuHeight = (int)(cam.viewportHeight / 11);
 		notLastMap = Play.level < LevelSelect.LEVELS_COUNT;
 
-		new Scores().setStarsCount(Play.level, 0);
-
 		calculateGainedStars();
 		createGainedStars();
 		setTexts();
