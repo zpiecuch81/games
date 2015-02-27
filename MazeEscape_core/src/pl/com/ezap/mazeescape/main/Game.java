@@ -8,6 +8,7 @@ import pl.com.ezap.mazeescape.handlers.GameStateManager;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -77,6 +78,8 @@ public class Game implements ApplicationListener {
 	public void render()
 	{
 		Gdx.graphics.setTitle(TITLE + " -- FPS: " + Gdx.graphics.getFramesPerSecond());
+		//if(Gdx.input.isKeyPressed(Keys.BACK))
+		//	gsm.back();
 		gsm.update(Gdx.graphics.getDeltaTime());
 		gsm.render();
 		BBInput.update();

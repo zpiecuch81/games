@@ -59,7 +59,7 @@ public class Instructions extends GameState {
 				sb,
 				Game.texts.get("instructions"),
 				cam.viewportWidth*0.1f,
-				cam.viewportHeight*0.8f,
+				cam.viewportHeight*0.9f,
 				cam.viewportWidth*0.8f,
 				HAlignment.CENTER);
 		sb.end();
