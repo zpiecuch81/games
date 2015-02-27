@@ -152,7 +152,7 @@ public class Play extends GameState {
 		fdef.shape = shape;
 		fdef.density = 0;
 		fdef.friction = 0;
-		fdef.restitution = 0;
+		fdef.restitution = 0.8f;
 		fdef.filter.categoryBits = B2DVars.BIT_PLAYER;
 		fdef.filter.maskBits = B2DVars.BIT_END | B2DVars.BIT_WALL;
 

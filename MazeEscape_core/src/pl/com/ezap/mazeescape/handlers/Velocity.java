@@ -5,7 +5,7 @@ import com.badlogic.gdx.math.Vector2;
 public class Velocity {
 
 	private final float MIN_VELOCITY = 1.5f;
-	private final float MAX_VELOCITY = 2.5f;
+	private final float MAX_VELOCITY = 2.7f;
 	private final float INC_VELOCITY = (MAX_VELOCITY - MIN_VELOCITY) / 20;
 	private float velocity = MIN_VELOCITY;
 	private float time = 0;
