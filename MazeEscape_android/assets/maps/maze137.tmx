@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="24" tilewidth="64" tileheight="64">
+ <properties>
+  <property name="bestTimePossible" value="33"/>
+  <property name="viewSize" value="5"/>
+ </properties>
+ <tileset firstgid="1" name="sandbush" tilewidth="64" tileheight="64">
+  <image source="sandbush.png" width="256" height="192"/>
+ </tileset>
+ <layer name="path" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzVlEsKACAIRKP7H7q9zE+jRUKLaByfJa31JvZgsfwbBue1iY7xpZxIrzTIx9Wq+SgnOWcMik9x1prViwXqB/khFvdejHHKh7Su5ylnh6HWUZzJezsOtle86T+gclRNxZrO7Q1nGp1Zc2xK4zynbMgzmfGqc56KifWqPBlb9z5/iAPPEgGn
+  </data>
+ </layer>
+ <layer name="wall" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzVkzsOACAIQ/H+l3Yn/Ylx0IRFobxYWFW1HsTksPobBqdVJI/xpZwoX+UgHder16Oa5J0xKD7F2Xuy/3B+JT4p31zfGz7lj8qfcJ4wqDlRu5nui5vlhNcdtx9d0wXSTP5uypkwnc6aY3PeKs0p23TG3Yyiu9SvhJOxIR2W/0tsaSABJg==
+  </data>
+ </layer>
+ <layer name="hint" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzVlNEKwCAIRX2Za/v/D449BCJm3kq2CVGQHG83iygvDmDcCfX5J8xC7/twgRpGzId3ghq8HM3bwbT2MpnSY+012lesZhmtn7RfK8zZ2MWU3rVzrTI972b+J6tH0fpejtU/WpvWb+nmzjqqbfRuSqAuyuzleH9n5H5H94Xmfy0qzg8Crg==
+  </data>
+ </layer>
+ <layer name="start" width="21" height="24" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUUAuwDLQDRsEoGAWjAAoAGiAABQ==
+  </data>
+ </layer>
+ <layer name="end" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYKANYKaRuaNgFIyCUTAKRsEoIAwAHngABA==
+  </data>
+ </layer>
+</map>

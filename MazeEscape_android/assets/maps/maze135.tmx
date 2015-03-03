@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="24" tilewidth="64" tileheight="64">
+ <properties>
+  <property name="bestTimePossible" value="37"/>
+  <property name="viewSize" value="5"/>
+ </properties>
+ <tileset firstgid="1" name="sandbush" tilewidth="64" tileheight="64">
+  <image source="sandbush.png" width="256" height="192"/>
+ </tileset>
+ <layer name="path" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzlzjEKACAMQ9Hi/Q/tKqKtMckgFkqX8nkRnmnCHZs/OVdNh5P1qp1Zk/FlTYcT9aqdSPPGd9J0OCuv2sk0ER/SdDhnr9qpbCK38ux82d8r0wE0YQG/
+  </data>
+ </layer>
+ <layer name="wall" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzlzzEKACAMQ9H2/pd2FdFobDKIhW7l85oRkYZVTt/8yTlrOpxVr9qJmhUfajqcrFftZJo3vpOmw7nzqp2VJuNjmg7n6FU7lU32H+RZ+dDdK9sANoABGg==
+  </data>
+ </layer>
+ <layer name="hint" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAN4ARiVipgZMBGA3dyUMmdXDRwGzb/Uhqu7ETaQykYNZM2ZhIb/8SkRzY0mlj1pJhJyL3Y0iMhM6kRvqNm0sdMWPyTUz7iMpMSd8PKe3YcfFrk3YEEADtMArI=
+  </data>
+ </layer>
+ <layer name="start" width="21" height="24" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGActAO4DKAAALIAAF
+  </data>
+ </layer>
+ <layer name="end" width="21" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBjcgHmgHTAKRsEoGAWjYBQMQQAAHaAABA==
+  </data>
+ </layer>
+</map>
