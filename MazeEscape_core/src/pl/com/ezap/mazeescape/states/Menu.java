@@ -5,6 +5,7 @@ import pl.com.ezap.mazeescape.handlers.MenuButton;
 import pl.com.ezap.mazeescape.main.Game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 
@@ -59,7 +60,9 @@ public class Menu extends GameState {
 	}
 	
 	public void render() {
-		sb.setProjectionMatrix(cam.combined);
+		sb.setProjectionMatrix(hudCam.combined);
+		Gdx.gl.glClearColor(0, 0, 0, 0);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		super.render();
 

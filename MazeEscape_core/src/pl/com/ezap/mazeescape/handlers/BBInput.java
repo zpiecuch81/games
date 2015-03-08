@@ -12,12 +12,13 @@ public class BBInput {
 	public static boolean[] keys;
 	public static boolean[] pkeys;
 	public static boolean[] flinged;
-	private static final int NUM_KEYS = 5;
+	private static final int NUM_KEYS = 6;
 	public static final int ZOOMIN = 0;
 	public static final int UP = 1;
 	public static final int DOWN = 2;
 	public static final int LEFT = 3;
 	public static final int RIGHT = 4;
+	public static final int BACK = 5;
 
 	static {
 		keys = new boolean[NUM_KEYS];

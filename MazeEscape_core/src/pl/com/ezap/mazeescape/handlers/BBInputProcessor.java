@@ -46,6 +46,7 @@ public class BBInputProcessor implements InputProcessor, GestureListener {
 		if(k == Keys.LEFT) BBInput.setKey(BBInput.LEFT, true);
 		if(k == Keys.RIGHT) BBInput.setKey(BBInput.RIGHT, true);
 		if(k == Keys.DOWN) BBInput.setKey(BBInput.DOWN, true);
+		if(k == Keys.BACK) BBInput.setKey(BBInput.BACK, true);
 		return false;
 	}
 
@@ -56,6 +57,7 @@ public class BBInputProcessor implements InputProcessor, GestureListener {
 		if(k == Keys.LEFT) BBInput.setKey(BBInput.LEFT, false);
 		if(k == Keys.RIGHT) BBInput.setKey(BBInput.RIGHT, false);
 		if(k == Keys.DOWN) BBInput.setKey(BBInput.DOWN, false);
+		if(k == Keys.BACK) BBInput.setKey(BBInput.BACK, false);
 		return false;
 	}
 
