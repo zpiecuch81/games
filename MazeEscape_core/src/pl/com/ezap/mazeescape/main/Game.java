@@ -49,16 +49,7 @@ public class Game implements ApplicationListener {
 		res.loadTexture("images/star.png");
 		res.loadTexture("images/levels.png");
 
-		res.loadSound("sfx/jump.wav");
-		res.loadSound("sfx/crystal.wav");
-		res.loadSound("sfx/levelselect.wav");
-		res.loadSound("sfx/hit.wav");
-		res.loadSound("sfx/changeblock.wav");
-
-//		res.loadMusic("music/bbsong.ogg");
-//		res.getMusic("bbsong").setLooping(true);
-//		res.getMusic("bbsong").setVolume(0.5f);
-//		res.getMusic("bbsong").play();
+		//res.loadSound("sfx/hit.wav");
 
 		FileHandle baseFileHandle = Gdx.files.internal("i18n/texts");
 		texts = I18NBundle.createBundle(baseFileHandle);
