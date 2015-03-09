@@ -10,6 +10,9 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class TexturesGenerator {
 
+	private static TextureRegion grayedLevel;
+	private static TextureRegion enabledLevel;
+	
 	public static Texture getRegularButton( int width, int height, Color color) {
 		int radius = width/3;
 		if( radius > 15) radius = 15; 
@@ -31,7 +34,11 @@ public class TexturesGenerator {
 	}
 
 	public static TextureRegion getLevelButton( int width, int height, boolean grayed) {
-		Texture tex=Game.res.getTexture("levels");
-		return new TextureRegion(tex, grayed ? 95 : 0, 0, 95, 100);
+		if( grayedLevel == null ) {
+			Texture tex = Game.res.getTexture("levels");
+			grayedLevel = new TextureRegion(tex, 95, 0, 95, 100);
+			enabledLevel = new TextureRegion(tex, 0, 0, 95, 100);
+		}
+		return grayed ? grayedLevel : enabledLevel;
 	}
 }
